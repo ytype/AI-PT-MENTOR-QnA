@@ -12,9 +12,16 @@ def hello():
 
 @app.route('/fileUpload', methods = ['POST'])
 def upload_file():
-    f = request.files['file']
-    f.save(f'uploads/{secure_filename(f.filename)}')
-    return 'uploads 디렉토리 -> 파일 업로드 성공!'
+   try :
+      f = request.files['file']
+      fileName = f.filename + '.wav'
+      f.save(f'uploads/{secure_filename(fileName)}')
+      return '200'
+   
+   except :
+      return '500'
+   
+   
  
 if __name__ == '__main__':
    app.run(debug = True)

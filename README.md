@@ -79,6 +79,21 @@ axios.get('localhost:5000')
 
 추가로 안드로이드 뿐만 아니라 ios도 한번에 제작하려면 크로스플랫폼으로 cordova, vue, react native, google flutter, ms xamarin 등이 있습니다.
 
-## +
+## Example_ recorder
 
-cordova debugging : https://smallbutdeep.tistory.com/511
+setting server, edit frontend server url
+
+Back End
+
+``` bash
+python3 app.py
+lt --port 5000
+```
+
+proceed with caution : Click to Continue
+
+Front End 
+
+``` bash
+vercel --prod
+```

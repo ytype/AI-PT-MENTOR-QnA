@@ -1,4 +1,4 @@
-# vue-audio-record
+# vue-http
 
 ## Project setup
 ```

@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
+from flask_cors import CORS
+
 app = Flask(__name__)
- 
+CORS(app)
+
 @app.route('/')
 def hello():
    return "Hello!"

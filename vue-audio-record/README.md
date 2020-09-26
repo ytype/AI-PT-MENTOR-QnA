@@ -1,4 +1,4 @@
-# http-axios
+# vue-audio-record
 
 ## Project setup
 ```

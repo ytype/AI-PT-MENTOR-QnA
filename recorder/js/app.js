@@ -6,7 +6,7 @@ var rec; 							//Recorder.js object
 var input; 							//MediaStreamAudioSourceNode we'll be recording
 
 // var serverUrl = "http://127.0.0.1:5000/"
-var serverUrl = "https://good-walrus-94.loca.lt/"
+var serverUrl = "https://soft-dolphin-10.loca.lt//"
 
 // shim for AudioContext when it's not avb. 
 var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -47,6 +47,7 @@ function startRecording() {
     	https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
 	*/
 
+	
 	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 		console.log("getUserMedia() success, stream created, initializing Recorder.js ...");
 
@@ -76,6 +77,8 @@ function startRecording() {
 		console.log("Recording started");
 
 	}).catch(function(err) {
+		var serverElement = document.getElementById('server')
+		serverElement.innerText = err
 	  	//enable the record button if getUserMedia() fails
     	recordButton.disabled = false;
     	stopButton.disabled = true;
